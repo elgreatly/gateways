@@ -1,12 +1,13 @@
-Gateway devices Service
+# Gateway devices Service
 
-## Installation
+## Running APP
 
+1. install modules
 ```bash
 $ npm install
 ```
-
-## Running APP
+2. take copy from `.env-example` and change name of copy file to `.env` and add your data
+3. start the App
 
 ```bash
 # development
@@ -26,4 +27,16 @@ $ npm run start:prod
 
 ```bash
 npm run test
+```
+
+## Running Lint
+
+```bash
+npm run lint
+```
+
+## Running Seed
+
+```bash
+npm run seed
 ```
