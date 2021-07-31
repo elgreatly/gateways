@@ -1,0 +1,16 @@
+<div class="form-container">
+    <form [formGroup]="deviceForm" (ngSubmit)="onSubmit()">
+
+        <div class="form-control">
+            <label for="vendor">Vendor: </label>
+            <input id="vendor" type="text" formControlName="vendor">
+        </div>
+        <div class="form-control">
+            <label for="status">Status: </label>
+            <input type="checkbox" class="switch" formControlName="status">
+        </div>
+        
+        <button type="submit" [disabled]="!deviceForm.valid || formSubmitting">Submit</button>
+    
+    </form>
+</div>

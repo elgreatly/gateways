@@ -1,0 +1,15 @@
+<section class="top-section">
+    <div class="title">
+        <h1>{{title}}</h1>
+    </div>
+    <app-button [text]="buttonText" (clickEvent)="addItem()"></app-button>
+</section>
+<section class="list-section">
+    <div class="item-bar-container" *ngFor="let item of items | paginate: { itemsPerPage: 10, currentPage: currentPage, totalItems: totalCount }">
+        <app-item-bar [item]="item" [isEditable]="isEditable" (editItemEvent)="editItem($event)"></app-item-bar>
+    </div>
+</section>
+
+<pagination-controls 
+    (pageChange)="pageChanged($event)"
+></pagination-controls>

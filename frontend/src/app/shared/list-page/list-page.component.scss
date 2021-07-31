@@ -1,0 +1,19 @@
+.top-section {
+    overflow: hidden;
+    margin-bottom: 20px;
+    app-button {
+        float: right;
+    }
+    .title {
+        float: left;
+        h1 {
+            font-family: Roboto;
+            font-size: 22px;
+            font-weight: 400;
+            color: #ffffff;
+        }
+    }
+}
+.item-bar-container {
+    margin-bottom: 10px;
+}

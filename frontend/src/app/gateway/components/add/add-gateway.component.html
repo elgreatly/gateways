@@ -1,0 +1,33 @@
+<div class="form-container">
+    <form [formGroup]="gatewayForm" (ngSubmit)="onSubmit()">
+
+        <div class="form-control">
+            <label for="serial-number">Serial Number: </label>
+            <input id="serial-number" type="text" formControlName="serialNumber">
+        </div>
+        <div class="form-control">
+            <label for="name">Name: </label>
+            <input id="serial-number" type="text" formControlName="name">
+        </div>
+        <div class="form-control">
+            <label for="ipv4">IPv4: </label>
+            <input id="ipv4" type="text" formControlName="ipv4">
+        </div>
+
+        <div class="form-control">
+            <label for="devices">Devices: </label>
+            <ng-select
+                id="devices"
+                [items]="items"
+                [multiple]="true"
+                [maxSelectedItems]="10"
+                bindLabel="name"
+                bindValue="id"
+                formControlName="devicesIds">
+            </ng-select>
+        </div>
+        
+        <button type="submit" [disabled]="!gatewayForm.valid || formSubmitting">Submit</button>
+    
+    </form>
+</div>

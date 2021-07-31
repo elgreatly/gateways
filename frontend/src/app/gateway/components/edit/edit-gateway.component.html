@@ -1,0 +1,19 @@
+<div class="form-container">
+    <form [formGroup]="gatewayForm" (ngSubmit)="onSubmit()">
+        <div class="form-control">
+            <label for="devices">Devices: </label>
+            <ng-select
+                id="devices"
+                [items]="items"
+                [multiple]="true"
+                [maxSelectedItems]="10"
+                bindLabel="name"
+                bindValue="id"
+                formControlName="devicesIds">
+            </ng-select>
+        </div>
+        
+        <button type="submit" [disabled]="!gatewayForm.valid || formSubmitting">Submit</button>
+    
+    </form>
+</div>
